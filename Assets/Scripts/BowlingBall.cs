@@ -3,17 +3,18 @@ using UnityEngine;
 
 public class BowlingBallController : MonoBehaviour
 {
-    private GameObject bowlingBallBody;
+    private GameObject bowlingBall;
 
     public UnityEngine.UI.Slider aimer;
 
     void Start()
     {
-        bowlingBallBody = gameObject;
+        bowlingBall = gameObject;
     }
 
     void Update()
     {
-        bowlingBallBody.transform.rotation = Quaternion.Euler(90f, aimer.value, 0f);
+        bowlingBall.transform.rotation = Quaternion.Euler(90f, aimer.value, 0f);
+        print(bowlingBall.transform.rotation);
     }
 }
